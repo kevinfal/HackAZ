@@ -3,9 +3,12 @@ package com.example.hackaz;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 
-public class BluetoothController<bluetoothAdapter> {
+import static android.support.v4.app.ActivityCompat.startActivityForResult;
 
 
+public class BluetoothController{
+
+    private static final int REQUEST_ENABLE_BT = 1;
 
     public void setUpBluetooth() {
         BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -16,7 +19,9 @@ public class BluetoothController<bluetoothAdapter> {
 
         if (!bluetoothAdapter.isEnabled()) {
             Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-            startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+            bluetoothAdapter.enable();
         }
     }
+
+
 }
