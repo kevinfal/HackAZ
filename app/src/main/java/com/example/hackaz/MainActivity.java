@@ -2,6 +2,8 @@ package com.example.hackaz;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -9,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     //---> ATTRIBUTES <---//
     private BluetoothController myc1 = new BluetoothController(); // myc stands for my controller
+    private Button btnTest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
         else {
             testBox.setText("BLUETOOTH FOUND");
         }
+
+        btnTest = findViewById(R.id.testButton);
+        btnTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myc1.beginSearch();
+            }
+        });
 
     }
 
