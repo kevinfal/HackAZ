@@ -9,6 +9,7 @@ import static android.support.v4.app.ActivityCompat.startActivityForResult;
 public class BluetoothController {
 
     //---> ATTRIBUTES <---//
+    private BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
 
 
@@ -22,7 +23,6 @@ public class BluetoothController {
     // Setting up Bluetooth in a given device to use
     public boolean setUpBluetooth() {
 
-        BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (bluetoothAdapter == null) {
             // Device doesn't support Bluetooth
             System.out.println("Failure to connect. Bluetooth not supported on device.");
