@@ -9,9 +9,12 @@ import static android.support.v4.app.ActivityCompat.startActivityForResult;
 public class BluetoothController {
 
     //---> ATTRIBUTES <---//
-    private BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+    private BluetoothAdapter bluetoothAdapter;
 
-
+    //---> CONSTRUCTORS <---//
+    protected BluetoothController(){
+        bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+    }
 
     //---> GETTERS/SETTERS <---//
 
@@ -21,7 +24,7 @@ public class BluetoothController {
 
 
     // Setting up Bluetooth in a given device to use
-    public boolean setUpBluetooth() {
+    protected boolean setUpBluetooth() {
 
         if (bluetoothAdapter == null) {
             // Device doesn't support Bluetooth
@@ -49,7 +52,9 @@ public class BluetoothController {
 
 
     //Message sending
+    public boolean sendMessage(){
 
+    }
 
     //Message receiving
 

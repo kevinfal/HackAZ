@@ -1,0 +1,4 @@
+TODO:
+1 - Add prompt for Bluetooth Permission:                                    NOT COMPLETED
+2 - Add prompt for Bluetooth enabling(non-emergency):                       NOT COMPLETED
+3 - Figure out message selecting a particular device:                       NOT COMPLETED
