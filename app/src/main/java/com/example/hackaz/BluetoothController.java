@@ -20,11 +20,14 @@ public class BluetoothController {
 
 
     // Setting up Bluetooth in a given device to use
-    public void setUpBluetooth() {
+    public boolean setUpBluetooth() {
+
         BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (bluetoothAdapter == null) {
             // Device doesn't support Bluetooth
             System.out.println("Failure to connect. Bluetooth not supported on device.");
+            return false;
+
         }
 
         //if (!bluetoothAdapter.isEnabled()) {
@@ -36,6 +39,7 @@ public class BluetoothController {
             bluetoothAdapter.enable();
         }
 
+        return true;
     }
 
     //Searching
