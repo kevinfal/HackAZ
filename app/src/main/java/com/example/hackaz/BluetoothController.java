@@ -38,5 +38,18 @@ public class BluetoothController {
 
     }
 
+    //Searching
+
+
+    //Pairing
+
+
+    //Message sending
+
+
+    //Message receiving
+
+
+    //Distance Processing
 
 }
