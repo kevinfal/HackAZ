@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         btnTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                myc1.beginSearch();
+                myc1.beginSearch(MainActivity.super.getApplicationContext());
             }
         });
 

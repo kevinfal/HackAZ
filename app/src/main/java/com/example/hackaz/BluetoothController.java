@@ -82,8 +82,8 @@ public class BluetoothController {
     };
 
     //Other
-    protected void beginSearch(){
-        Context ctx = createDeviceProtectedStorageContext().getApplicationContext();
+    protected void beginSearch(Context context){
+
         context.registerReceiver(receiver, new IntentFilter(BluetoothDevice.ACTION_FOUND));
         bluetoothAdapter.startDiscovery();
     }
